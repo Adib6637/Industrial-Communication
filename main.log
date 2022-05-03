@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.24)  3 MAY 2022 13:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.24)  3 MAY 2022 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (abstract.tex)
 (introduction.tex) (type.tex) (problem.tex) (can.tex) (application.tex)
-[1{C:/Users/sheik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+(state.tex) [1{C:/Users/sheik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 
 ]
@@ -323,18 +323,18 @@ Before submitting the final camera ready copy, remember to:
 
 ] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 4165 strings out of 478582
- 64642 string characters out of 2854159
+ 4170 strings out of 478582
+ 64740 string characters out of 2854159
  368421 words of memory out of 3000000
- 22308 multiletter control sequences out of 15000+600000
+ 22310 multiletter control sequences out of 15000+600000
  503958 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,62p,916b,332s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,11n,62p,926b,332s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program 
 Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/ty
 pe1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmr8a
 .pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 57059 bytes).
+Output written on main.pdf (2 pages, 57334 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
