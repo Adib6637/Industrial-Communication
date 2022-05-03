@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.28)  3 MAY 2022 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.28)  3 MAY 2022 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -308,14 +308,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 (C:\Users\zafir\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(abstract.tex) (introduction.tex) (type.tex) (problem.tex) (can.tex)
-(application.tex) (state.tex)
-Underfull \vbox (badness 3029) has occurred while \output is active []
-
- [1{C:/Users/zafir/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+(abstract.tex) (introduction.tex) [1{C:/Users/zafir/AppData/Local/MiKTeX/fonts/
+map/pdftex/pdftex.map}
 
 
-]
+] (type.tex) (problem.tex) (can.tex) (application.tex)
+(state.tex)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -327,24 +325,22 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2
-
-] (main.aux) ) 
+[2] (main.aux) ) 
 Here is how much of TeX's memory you used:
  4170 strings out of 478582
  66250 string characters out of 2844344
- 368421 words of memory out of 3000000
+ 369421 words of memory out of 3000000
  22310 multiletter control sequences out of 15000+600000
  503958 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,62p,926b,332s stack positions out of 10000i,1000n,20000p,200000b,80000s
-{C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/bas
-e/8r.enc}<C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mb8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mbi8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
-tmr8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on main.pdf (2 pages, 60882 bytes).
+ 55i,11n,62p,1395b,332s stack positions out of 10000i,1000n,20000p,200000b,80000s
+{C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/b
+ase/8r.enc}<C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
+utmb8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/
+utmbi8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmr8a.pfb><C:/Users/zafir/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on main.pdf (2 pages, 64214 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
