@@ -1,11 +1,44 @@
 
 \section{CAN Communication Protocol}
 
+The controller area network (CAN) is a highly integrated system using serial bus and communications protocol to connect intelligent devices for real-time control applications. Control Area Network use a vehicle bus standard that allows communication such as, sending message, data or information between microcontrollers and other devices to happen. CAN is able to operate at data rates of up to 1 megabits per second over a possible line length of up to several kilometres, and has excellent error detection and confinement capabilities. Control Area Network which is also well-known as CAN Communication was introduced by Robert Bosch GmbH in 1983. CAN is purposely created to make automobile industry system more reliable and efficient but it is also widely used in industrial automation and other areas. 
 \subsection{The CAN Standard }
+
+CAN is a serial communications bus established by the International Organization for Standardization (ISO) that was developed for the automotive industry to replace the complex wiring harness with a two-wire bus. High immunity to electrical interference is required, as well as the ability to self-diagnose and rectify data mistakes, according to the specification. Because of these characteristics, CAN is widely used in a range of industries, including building automation, medical, and manufacturing.
+
+
+The CAN communications protocol, ISO-11898: 2003, specifies how data is transmitted between devices on a network and follows the Open Systems Interconnection (OSI) paradigm, which is divided into layers. The physical layer of the model defines the actual communication between devices connected by the physical medium. 
+
 \subsection{Standard CAN }
+
+The CAN communication protocol is a carrier-sense, multiple-access protocol (CSMA/CD+AMP) that includes collision detection and message priority arbitration. Each node on a bus must wait for a certain duration of idleness before attempting to send a message, according to CSMA. CD+AMP denotes that collisions are resolved using bit-wise arbitration, with each message's priority preprogrammed in the identification field. Bus access is always granted to the identification with the highest priority. That example, because the last logichigh in the identification has the highest priority, it continues to transmit. An arbitrating node knows if it placed the logic-high bit on the bus because every node on the bus participates in writing every bit "as it is written."
+
 \subsubsection{The Bit Fields of Standard CAN}
+
+The standard CAN frame consists of the following bits:
+
+SOF- Start of Frame. The message starts from this point.
+Identifier: It decides the priority of the message. Lower the binary value, higher is the priority. It is 11 bit.
+RTR– Remote Transmission Request. It is dominant when information is required from another node. Each node receives the request, but only that node whose identifier matches that of the message is the required node. Each node receives the response as well.z
+IDE– Single Identification Extension. If it is dominant, it means a standard CAN identifier with no extension is being transmitted.
+R0– reserved bit.
+DLC– Data Length Code. It defines the length of the data being sent. It is 4 bit
+Data– Up to 64 bit of data can be transmitted.
+CRC– Cyclic Redundancy Check. It contains the checksum (number of bits transmitted) of the preceding application data for error detection.
+ACK– Acknowledge. It is for 2 bit. It is dominant if an accurate message is received.
+EOF– end of the frame. It marks the end of can frame and disables bit stuffing.
+IFS– Inter Frame Space. It contains the time required by the controller to move a correctly received frame to its proper position.
+
+
 \subsection{A CAN Message }
 \subsubsection{Arbitration}
+
+The opposing logic state between the bus and the driver input and receiver output is a basic CAN property, as shown in Figure 4. A logic high is normally linked with a one, and a logic low with a zero, however this is not the case on a CAN bus. This is why the driver input and receiver output pins of TI CAN transceivers are internally passively pushed high, such that the device defaults to a recessive bus state on all input and output pins in the absence of any input.
+
+Bus access is based on events and occurs at random. If two nodes try to occupy the bus at the same time, nondestructive bit-wise arbitration is used to provide access. Nondestructive means that the node that wins arbitration keeps sending the message without it being deleted or corrupted by another node.
+
+A feature of CAN that makes it particularly appealing for application in a real-time control environment is the allocation of priority to messages in the identification. The higher the priority, the smaller the binary message identifying number. Because it keeps the bus dominant the longest, a message with an identification made entirely of zeros is the highest priority message on a network. As a result, if two nodes start transmitting at the same time, the node that sends a zero (dominant) as the last identifying bit while the others send a one (recessive) holds control of the CAN bus and continues to complete its message. On a CAN bus, a dominant bit always overwrites a recessive bit.
+
 \subsubsection{Message Types}
 \subsubsection{A Valid Frame}
 \subsubsection{Error Checking and Fault Confinement}
