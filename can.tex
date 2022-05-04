@@ -40,10 +40,70 @@ Bus access is based on events and occurs at random. If two nodes try to occupy t
 A feature of CAN that makes it particularly appealing for application in a real-time control environment is the allocation of priority to messages in the identification. The higher the priority, the smaller the binary message identifying number. Because it keeps the bus dominant the longest, a message with an identification made entirely of zeros is the highest priority message on a network. As a result, if two nodes start transmitting at the same time, the node that sends a zero (dominant) as the last identifying bit while the others send a one (recessive) holds control of the CAN bus and continues to complete its message. On a CAN bus, a dominant bit always overwrites a recessive bit.
 
 \subsubsection{Message Types}
+There are four different message types (or frames) that can be transmitted on a CAN system as below:
+
+1) The Data Frame
+2) The Remote Frame
+3) The Error Frame
+4) The Overload Frame
+
+
 \subsubsection{A Valid Frame}
+
+When the last bit of a message's terminating EOF field is received in the error-free recessive state, the message is considered error-free. The transmitter repeats a broadcast if a dominating bit in the EOF field is present.
+
 \subsubsection{Error Checking and Fault Confinement}
+
+The abundance of error-checking mechanisms in CAN contributes to its robustness. The CAN protocol has five error-checking methods: three at the message level and two at the bit level. If a message fails to pass any of these error detection mechanisms, it is not accepted, and the receiving node generates an error frame. This compels the transmitting node to relay the message several times until it is appropriately received. If a malfunctioning node hangs up a bus by repeatedly repeating an error, its controller disables its transmit capacity if an error limit is reached.
+
+
+1) Message Level
+
+
+A form check is performed at the message level. This check examines the message for fields that must always be recessive bits. An error is generated if a dominating bit is discovered. The SOF, EOF, ACK delimiter, and CRC delimiter bits are all examined.
+
+2) Bit Level
+
+
+Each bit transferred is monitored at the bit level by the message's transmitter. An error is caused if a data bit (not an arbitration bit) is written onto the bus and its opposite is read. The message identity field, which is used for arbitration, and the acknowledge slot, which requires a recessive bit to be replaced by a dominant bit, are the only exceptions.
+
 \subsection{The CAN Bus}
+
+The CAN standard establishes a communication network that connects all bus nodes and allows them to communicate with one another. A central control node may or may not exist, and nodes may be added at any moment, even while the network is operational (hot-plugging)
+
 \subsubsection{CAN Transceiver Features}
+
+1) 3.3V Supply Voltage
+
+2) ESD Protection
+
+3)Common- Mode Voltage Operating Range
+
+4) Common-Mode Noise Rejection
+
+5) Controlled Driver Output Transistion Times
+
+6) Low-Current Bus Monitor, Standby and Sleep Modes
+
+7) Low-Current Bus Monitor, Standby and Sleep Modes
+
+8) Thermal Shutdown Protection
+
+9)  Bus Input Impedance
+
+10)  Glitch-Free Power Up and Power Down
+
+11)  Unpowered Node Protection
+
+12) Reference Voltage
+
+13) V-Split
+
+14) Loopback
+
+15) Autobaud Loopback
+
+
 \subsubsection{CAN Transceiver Selection Guide }
 
 
