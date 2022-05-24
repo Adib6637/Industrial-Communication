@@ -12,3 +12,28 @@
 
 
 
+
+Todays car consist of many electronic componet and they are communicating with each other.  For instance, the system that get input from user like pedal brake will communicate with the brake lamp system. The communication may require at least two wire. The input from the user also may be used by other system like safety belt system and door lock system. This  communication enviroment will end up with adding more and more wire. This could be so messy and become more complicate to maintain.
+
+The basic solution concept is using a bus system. The bus system should fullfil our main requirement whereas we nedd used less wire for the whole communicaion system. One of the most popular bus system protocol is I2C where only two wires are needed for the whole communication system. After experimenting with 2C we found out it is not really a solution because the communication become unstable when the length of the wire more than 1 meter. The communication become stable for long distance if we use very low frequency means low data rate transfer. 
+
+Considering a situation where a driver need to make an emergency brake, communicating with low frequence can cause slow response on the brake lamp system that could cause the car behind cannot response immediaetly. Thus, casu a catastrophic consequence. Means that we need to refine our requirement on the communication protocol by adding new parameter like support high frequency or high data rate transfer for long distance. 
+
+To fullfill all this requirement we need to make another reasearch on protocol that could solve this problem. As result, Controller Area Network is the best solution for this problem or requirement. This protocol will be explained more in the next section
+
+
+intro 
+
+situation
+
+Considering a stuation of emergency break, it is issential to 
+
+solution idea
+
+first solution
+
+problem
+
+solution (continue in next sectionn)
+
+
