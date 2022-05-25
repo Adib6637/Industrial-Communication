@@ -1,34 +1,24 @@
 
 \section{CAN Communication Protocol}
 
-The controller area network (CAN) is a highly integrated system using serial bus and communications protocol to connect intelligent devices for real-time control applications. Control Area Network use a vehicle bus standard that allows communication such as, sending message, data or information between microcontrollers and other devices to happen. CAN is able to operate at data rates of up to 1 megabits per second over a possible line length of up to several kilometres, and has excellent error detection and confinement capabilities. Control Area Network which is also well-known as CAN Communication was introduced by Robert Bosch GmbH in 1983. CAN is purposely created to make automobile industry system more reliable and efficient but it is also widely used in industrial automation and other areas. 
+The controller area network (CAN) is a highly integrated system that connects intelligent devices for  real-time control applications by utilizing serial bus and communications protocol. Control Area Network use a vehicle bus standard that allows communication such as, transferring messages, data or informations between micro-controllers and other devices. CAN is able to operate at data speeds of up to 1 megabits per second (1Mbps) over a possible line length of up to several kilometres, and has outstanding error detection and confinement capabilities. Control Area Network which is also well-known as CAN Communication was introduced by Robert Bosch GmbH in 1983. CAN is purposely created to make automobile industry system more reliable and efficient but it is also widely used in industrial automation and other fields. 
 \subsection{The CAN Standard }
 
-CAN is a serial communications bus established by the International Organization for Standardization (ISO) that was developed for the automotive industry to replace the complex wiring harness with a two-wire bus. High immunity to electrical interference is required, as well as the ability to self-diagnose and rectify data mistakes, according to the specification. Because of these characteristics, CAN is widely used in a range of industries, including building automation, medical, and manufacturing.
+The International Organization for Standardization (ISO) designed the CAN serial communications bus for the automotive industry to replace the complex wiring harness with a two-wire bus. According to the standard, high immunity to electrical interference is necessary, as well as the capacity to self-diagnose and correct data errors. CAN is widely utilized in a variety of industries, including building automation, medical, and manufacturing, because to these qualities.
 
 
-The CAN communications protocol, ISO-11898: 2003, specifies how data is transmitted between devices on a network and follows the Open Systems Interconnection (OSI) paradigm, which is divided into layers. The physical layer of the model defines the actual communication between devices connected by the physical medium. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{standard}
+    \caption{The Layered ISO 11898 Standard Architecture \cite{b5}}
+    \label{fig:standard}
+\end{figure}
+
+The CAN communications protocol, ISO-11898: 2003, specifies how data is transmitted between devices on a network and follows the Open Systems Interconnection (OSI) paradigm, which is divided into layers. The physical layer of the model defines the actual communication between devices connected by the physical medium. as shown Figure \ref{fig:standard}
 
 \subsection{Standard CAN }
 
-The CAN communication protocol is a carrier-sense, multiple-access protocol (CSMA/CD+AMP) that includes collision detection and message priority arbitration. Each node on a bus must wait for a certain duration of idleness before attempting to send a message, according to CSMA. CD+AMP denotes that collisions are resolved using bit-wise arbitration, with each message's priority preprogrammed in the identification field. Bus access is always granted to the identification with the highest priority. That example, because the last logichigh in the identification has the highest priority, it continues to transmit. An arbitrating node knows if it placed the logic-high bit on the bus because every node on the bus participates in writing every bit "as it is written."
-
-\subsubsection{The Bit Fields of Standard CAN}
-
-The standard CAN frame consists of the following bits:
-
-SOF- Start of Frame. The message starts from this point.
-Identifier: It decides the priority of the message. Lower the binary value, higher is the priority. It is 11 bit.
-RTR– Remote Transmission Request. It is dominant when information is required from another node. Each node receives the request, but only that node whose identifier matches that of the message is the required node. Each node receives the response as well.z
-IDE– Single Identification Extension. If it is dominant, it means a standard CAN identifier with no extension is being transmitted.
-R0– reserved bit.
-DLC– Data Length Code. It defines the length of the data being sent. It is 4 bit
-Data– Up to 64 bit of data can be transmitted.
-CRC– Cyclic Redundancy Check. It contains the checksum (number of bits transmitted) of the preceding application data for error detection.
-ACK– Acknowledge. It is for 2 bit. It is dominant if an accurate message is received.
-EOF– end of the frame. It marks the end of can frame and disables bit stuffing.
-IFS– Inter Frame Space. It contains the time required by the controller to move a correctly received frame to its proper position.
-
+The CAN communication protocol is a carrier-sense, multiple-access protocol (CSMA/CD+AMP) that includes collision detection and message priority arbitration. Each node on a bus must wait for a certain duration of idleness before attempting to send a message, according to CSMA. CD+AMP denotes that collisions are resolved using bit-wise arbitration, with each message's priority preprogrammed in the identification field. Bus access is always granted to the identification with the highest priority. That example, because the last logic high in the identification has the highest priority, it continues to transmit. An arbitrating node knows if it placed the logic-high bit on the bus because every node on the bus participates in writing every bit "as it is written."
 
 \subsection{A CAN Message }
 \subsubsection{Arbitration}
@@ -42,11 +32,12 @@ A feature of CAN that makes it particularly appealing for application in a real-
 \subsubsection{Message Types}
 There are four different message types (or frames) that can be transmitted on a CAN system as below:
 
-1) The Data Frame
-2) The Remote Frame
-3) The Error Frame
-4) The Overload Frame
-
+\begin{itemize}
+\item The Data Frame
+\item The Remote Frame
+\item The Error Frame
+\item The Overload Frame
+\end{itemize}
 
 \subsubsection{A Valid Frame}
 
@@ -71,7 +62,18 @@ Each bit transferred is monitored at the bit level by the message's transmitter.
 
 The CAN standard establishes a communication network that connects all bus nodes and allows them to communicate with one another. A central control node may or may not exist, and nodes may be added at any moment, even while the network is operational (hot-plugging)
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{CANbus}
+    \caption{ Details of a CAN Bus \cite{b5}}
+    \label{fig:CANbus}
+\end{figure}
+
+
+
 \subsubsection{CAN Transceiver Features}
+
+
 
 1) 3.3V Supply Voltage
 
@@ -104,7 +106,6 @@ The CAN standard establishes a communication network that connects all bus nodes
 15) Autobaud Loopback
 
 
-\subsubsection{CAN Transceiver Selection Guide }
 
 
 
