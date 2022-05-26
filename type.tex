@@ -1,12 +1,19 @@
 \section{Type of communication}
+Communication is highly important in our lives, especially in any system. The meaning behind communication network is a pattern or shape that is used in an organization to efficiently transmit information. The communication network is the established system in which messages can travel in one or more ways inside the company depending on the requirements. There are two kinds of communication. Wireless communication is the first, while wired communication is the second. For further information, multiple communication networks may be built based on their efficacy depending on the system's needs. 
 
 \subsection{wireless network}
+Wireless means that there is no physical touch between two sites. Thus, wireless networks are computer networks that are not connected by any form of cable. The deployment of a wireless network allows businesses to avoid the costly procedure of installing wires in buildings or connecting multiple equipment locations. Radio waves serve as the foundation of wireless systems, acting as a mode of transport for data transmission and reception. The examples of wireless networks are shown below.
 \subsubsection{bluetooth}
+Bluetooth was developed as an alternative to using cables and wires to build a network. It was designed to unite telecommunications protocols under a single worldwide standard. It is used for wireless communications and broadcasts over short distances. Bluetooth-enabled devices construct ad hoc networks (networks with a single function) with one another to exchange or broadcast data. While Bluetooth was designed to be a cable replacement, it is now extensively utilized because it generates a dynamic Personal Area Network (PAN) [1]
 
 \subsubsection{wifi}
+Wifi is a wireless networking protocol. Wi-Fi is simply a very modern digital radio that operates at frequencies in the electromagnetic spectrum ranging from 2 gigahertz to 5 gigahertz, which is roughly the same as microwave ovens. Each standard is an approved modification throughout time. The standards operate at variable frequencies, provide varying bandwidth, and support varying numbers of channels.[2]
 
 \subsection{wired network}
+A wired network is one of the most popular types of wired arrangement. Ethernet cables are commonly used in wired networks to transport data between linked PCs. A single router may connect all PCs in a small wired network. Larger networks frequently have many routers or switches that communicate with one another. One of these devices is often linked to a cable modem, T1 line, or other sort of Internet connection, which offers Internet access to all network devices. Wired can also refer to peripheral devices. Below are the example of wired network.
 
-\subsubsection{I2C}
 \subsubsection{UART}
+Two UARTs interact directly with each other in UART communication. The transmitting UART translates parallel data from a controlling device, such as a CPU, into serial data and sends it to the receiving UART, which then converts the serial data back into parallel data for the receiving device. To communicate data between two UARTs, just two wires are required. Data travels from the sending UART's Tx pin to the receiving UART's Rx pin. Figure below explain the connection using UART.
+\subsubsection{I2C}
+I2C combines the best characteristics of both SPI and UARTs. I2C allows you to link several slaves to a single master (similar to SPI) and have multiple masters control single or multiple slaves. This is extremely beneficial when more than one microcontroller is recording data to a single memory card or showing text to a single LCD. I2C communication, like UART communication, employs just two wires to communicate data between devices: Because I2C is synchronous, the bit output is synced to the bit sampling by a clock signal shared by the master and slave. The master is always in charge of the clock signal. SDA (Serial Data) – The line for the master and slave to send and receive data. SCL (Serial Clock) – The line that carries the clock signal. [3]
 
