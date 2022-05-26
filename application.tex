@@ -7,7 +7,7 @@ After we analyse the problem, we refine our requirement in requirement diagram a
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{requirement_diagram}
+    \includegraphics[width=0.5\textwidth]{requirement_diagram}
     \caption{Requirement Diagram}
     \label{fig:requirement_diagram}
 \end{figure}
@@ -22,7 +22,7 @@ After analysing the scenario, requirements and protocol that we want to use, we 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{use_case_dagram}
+    \includegraphics[width=0.5\textwidth]{use_case_dagram}
     \caption{Use Case Diagram}
     \label{fig:use_case_dagram}
 \end{figure}
@@ -31,7 +31,7 @@ Next, we extend each use case using activity diagrams to understand their behavi
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{sequence_diagram}
+    \includegraphics[width=0.5\textwidth]{sequence_diagram}
     \caption{Sequence Diagram}
     \label{fig:sequence_diagram}
 \end{figure}
@@ -40,7 +40,7 @@ Eventually, by analysing all the pervious diagram,  we are able to refine our sy
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=1.0\textwidth]{system_architecture}
+    \includegraphics[width=0.5\textwidth]{system_architecture}
     \caption{System Architecture}
     \label{fig:system_architecture}
 \end{figure}
@@ -50,7 +50,7 @@ For the implementation we divide it into two parts which is hardware and softwar
 
 \subsubsection{Hardware}
 
-For the hardware setup we will use Arduino UNO with CAN module as shown in Figure \ref{fig:MCP2521} to represent each subsystem as drawn in the system architecture that we present before in Figure \ref{fig:system_architecture} which are pedal system, database system and brake lamp system as shown in figure \ref{fig:subsystem_setup}. The CAN module that we are used is MCP2515. For the connection with between the Arduino and the CAN module, we use SPI communication protocol. Considering that the protocol should work for long distance, we also use ca. 1.5 meter for the connection between subsystem. After we have done the setup as illustrate in Figure \ref{fig:hardware_setup} we proceed to the next step which is the software implementation.
+For the hardware setup we will use Arduino UNO with CAN module as shown in Figure \ref{fig:MCP2521} to represent each subsystem as drawn in the system architecture that we present before in Figure \ref{fig:system_architecture} which are pedal system, database system and brake lamp system as shown in figure \ref{fig:subsystem_pedal}, \ref{fig:subsystem_database},\ref{fig:subsystem_lamp}. The CAN module that we are used is MCP2515. For the connection with between the Arduino and the CAN module, we use SPI communication protocol. Considering that the protocol should work for long distance, we also use ca. 1.5 meter for the connection between subsystem. After we have done the setup as illustrate in Figure \ref{fig:hardware_setup} we proceed to the next step which is the software implementation.
 
 \subsubsection{Software}
 
