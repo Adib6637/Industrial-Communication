@@ -1,9 +1,9 @@
 
 \section{Application of CAN Protocol}
 
-Now we will go through our project in  developing a prototype subsystem in a car that use CAN protocol as its communication standard.  For that, we use the problem as state in problem section as our main  reference for our prototype.
+In this section,  the  project in  developing a prototype subsystem in a car that use CAN protocol as its communication standard will be discussed. For that, we use the problem as state in problem section as our main  reference for our prototype.
 
-After we analyse the problem, we refine our requirement in requirement diagram as shown in Figure \ref{fig:requirement_diagram}. As we mention before, the protocol should work for long distance at high frequency. 
+After we analyse the problem, we refine our requirement in requirement diagram as shown in ``Fig. \ref{fig:requirement_diagram}". As mentioned before, the protocol should work for long distance at high frequency.
 
 \begin{figure}[h]
     \centering
@@ -12,13 +12,13 @@ After we analyse the problem, we refine our requirement in requirement diagram a
     \label{fig:requirement_diagram}
 \end{figure}
 
-As we explain in the problem section, we choose Controller area network because it supports high data rate transfer as stated in the pervious section. Next, we will explain how we model our solution base on the requirement.
+As explained in the problem section, Controller area network is chosen because it supports high data rate transfer for long distance and minimize number of wire used. Next, how the model of the solution will be explained based on the requirement.
 
 \subsection{Application Model}
 
 Our aim at this stage, which is modelling our solution, is to have a concrete system architecture including communication system where we will implement the communication protocol, so that it will be clear for us to do the implementation. The steps in this stage will be discussed in this section.
 
-After analysing the scenario, requirements and protocol that we want to use, we create a use case diagram to have a clear boundary of the system as shown in Figure \ref{fig:use_case_dagram}.
+After analysing the scenario, requirements and protocol that we want to use, we create a use case diagram to have a clear boundary of the system as shown in ``Fig. \ref{fig:use_case_dagram}".
 
 \begin{figure}[h]
     \centering
@@ -27,18 +27,18 @@ After analysing the scenario, requirements and protocol that we want to use, we 
     \label{fig:use_case_dagram}
 \end{figure}
 
-Next, we extend each use case using activity diagrams to understand their behaviour as pictured in Figure \ref{fig:AD_pedalpush}, and \ref{AD_pedalrelease}. later we use all this diagram to make a sequence diagram to illustrate how object in the subsystem interact with each other as shown in Figure \ref{fig:sequence_diagram}.
+Next, we extend each use case using activity diagrams to understand their behaviour as pictured in ``Fig. \ref{fig:AD_pedalpush}", and  ``Fig. \ref{fig:AD_pedalrelease}". later we use all this diagram to make a sequence diagram to illustrate how object in the subsystem interact with each other as shown in ``Fig \ref{fig:sequence_diagram}".
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{AD_pedalpush}
-    \caption{Activity diagram when the pedal pedal pushed}
-    \label{fig:fig:AD_pedalpush}
+    \caption{Activity diagram when the pedal pushed}
+    \label{fig:AD_pedalpush}
 \end{figure}
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.3\textwidth]{AD_pedalrelease}
-    \caption{Activity diagram when the is pedal released}
+    \caption{Activity diagram when the pedal is released}
     \label{fig:AD_pedalrelease}
 \end{figure}
 
@@ -50,7 +50,7 @@ Next, we extend each use case using activity diagrams to understand their behavi
     \label{fig:sequence_diagram}
 \end{figure}
 
-Eventually, by analysing all the pervious diagram,  we are able to refine our system architecture as shown in Figure \ref{fig:system_architecture}.  This indicates that we are ready for implementation stage, which will be the focus of the following subsection.
+Eventually, by analysing all the pervious diagram,  we are able to refine our system architecture as shown in ``Fig. \ref{fig:system_architecture}".  This indicates that we are ready for implementation stage, which will be the focus of the following subsection.
 
 \begin{figure}[h]
     \centering
@@ -64,7 +64,7 @@ For the implementation we divide it into two parts which is hardware and softwar
 
 \subsubsection{Hardware}
 
-For the hardware setup we will use Arduino UNO with CAN module as shown in Figure \ref{fig:MCP2521} to represent each subsystem as drawn in the system architecture that we present before in Figure \ref{fig:system_architecture} which are pedal system, database system and brake lamp system as shown in figure \ref{fig:subsystem_pedal}, \ref{fig:subsystem_database},\ref{fig:subsystem_lamp}. The CAN module that we are used is MCP2515. For the connection with between the Arduino and the CAN module, we use SPI communication protocol. Considering that the protocol should work for long distance, we also use ca. 1.5 meter for the connection between subsystem. After we have done the setup as illustrate in Figure \ref{fig:hardware_setup} we proceed to the next step which is the software implementation.
+For the hardware setup we will use Arduino UNO with CAN module as shown in ``Fig. \ref{fig:MCP2521}" to represent each subsystem as drawn in the system architecture that we present before in ``Fig. \ref{fig:system_architecture}" which are pedal system, database system and brake lamp system as shown in ``Fig. \ref{fig:subsystem_pedal}", ``Fig. \ref{fig:subsystem_database}", ``Fig. \ref{fig:subsystem_lamp}". The CAN module that we are used is MCP2515. For the connection with between the Arduino and the CAN module, we use SPI communication protocol. Considering that the protocol should work for long distance, we also use ca. 1.5 meter for the connection between subsystem. After we have done the setup as illustrate in Figure ``Fig. \ref{fig:hardware_setup}" we proceed to the next step which is the software implementation.
 
 \begin{figure}[h]
     \centering
