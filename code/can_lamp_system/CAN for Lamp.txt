@@ -18,7 +18,7 @@ void loop()
  if ((mcp2515.readMessage(&canMsg) == MCP2515::ERROR_OK) && (canMsg.can_id == 0x034) )
  {
      int x = canMsg.data[0];      // lamp on when push pedal   
-     Serial.print("Lamp menyala: ");
+     Serial.print("Lamp is on: ");
      Serial.println(x);
      digitalWrite(5, x);
      
@@ -26,7 +26,7 @@ void loop()
   if ((mcp2515.readMessage(&canMsg) == MCP2515::ERROR_OK) && (canMsg.can_id == 0x036) )
  {
      int y = canMsg.data[0];      // lamp off when release pedal   
-     Serial.print("Lampu x menyala: ");
+     Serial.print("Lamp is off: ");
      Serial.println(y);
      digitalWrite(5, !y);
    }
