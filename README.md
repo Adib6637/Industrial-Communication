@@ -1,3 +1,3 @@
-#Project Description
+# Project Description
 
-CAN communication between to microcontroller via CAN protocol for a vehicle rear brake system
+Realize communication between two microcontrollers via CAN protocol for a vehicle rear brake system
